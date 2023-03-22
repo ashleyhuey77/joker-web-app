@@ -1,54 +1,14 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import axios from '../axios.js';
-import {Button, Card, Modal} from 'react-bootstrap';
-import styles from '../App.css';
-
-
-export class ViewButton extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: false
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Button className={styles.btnPrimary} onClick={() => {
-          this.state = true;
-        }}>View</Button>
-        <ResultsModal isActive={this.state}></ResultsModal>
-      </div>
-    )
-  }
-};
-
-export function ResultsModal({isActive}) {
-  let [isActive, setIsActive] = useState(false);
-
-  const closeModal = () => isActive = false;
-
-    return (
-      <Modal show={isActive} onHide={closeModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={this.closeModal}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    )
-}
-
+import {Card} from 'react-bootstrap';
+import '../App.css';
+import {TestRunModal} from "./TestRunModal.js";
 
 export default class TestRunResults extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isActive: false,
       RunResults: []
     };
   }
@@ -62,9 +22,9 @@ export default class TestRunResults extends Component {
         const allRuns = response.data;
         console.log(allRuns);
         const runs = allRuns.map(u =>
-          <Card style={{ width: '18rem' }} className='m-2' key='{runs.id}'>
+          <Card className='custom' key='{runs.id}'>
             <Card.Body>
-                <Card.Title className={styles.cardTitle}>
+                <Card.Title className="card-title">
                   {u.name}
                 </Card.Title>
                 <Card.Text>
@@ -76,7 +36,8 @@ export default class TestRunResults extends Component {
                     </div>
                   </div>
                 </Card.Text>
-                <ViewButton></ViewButton>
+              <TestRunModal data={allRuns}>
+              </TestRunModal>
             </Card.Body>
           </Card>
         )
@@ -88,7 +49,6 @@ export default class TestRunResults extends Component {
     return (
       <div>
         {this.state.runs}
-        <ResultsModal></ResultsModal>
       </div>
     )
   }

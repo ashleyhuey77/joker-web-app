@@ -13,31 +13,54 @@
 .App {
   text-align: center;
 }
+
+.custom.card {
+  width: 25rem;
+  border-color: rgba(0, 0, 0, 0.075);
+  border-radius: 0px;
+  border-left: 8px solid #80D651 !important;
+  margin-bottom: 10px;
+  padding: 15px;
+  -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+  box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+
+
 .card-title {
-  color: #282a35;
-  background-color: #dff0d8;
+  color: #80D651;
   border-color: #d6e9c6;
 }
 
-.btn.btn-primary {
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bs-cyan);
-  --bs-btn-border-color: var(--bs-cyan);
-  --bs-btn-text-align: center;
-  width: 100%;
-  --bs-btn-border-radius: .1rem;
-  --bs-btn-hover-color: var(--bs-cyan);
-  --bs-btn-hover-bg: #{shade-color($bd-violet, 50%)};
-  --bs-btn-hover-border-color: #{shade-color($bd-violet, 50%)};
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #{shade-color($bd-violet, 50%)};
-  --bs-btn-active-border-color: #{shade-color($bd-violet, 50%)};
+.btn.btn-primary, .btn.btn-secondary {
+  --bs-btn-font-weight: 600 !important;
+  --bs-btn-color: var(--bs-white) !important;
+  --bs-btn-bg: var(--bs-cyan) !important;
+  --bs-btn-border-color: var(--bs-cyan) !important;
+  --bs-btn-text-align: center !important;
+  width: 100% !important;
+  --bs-btn-border-radius: .1rem !important;
+  --bs-btn-hover-color: var(--bs-cyan) !important;
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 50%)} !important;
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 50%)} !important;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb) !important;
+  --bs-btn-active-color: var(--bs-btn-hover-color) !important;
+  --bs-btn-active-bg: #{shade-color($bd-violet, 50%)} !important;
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 50%)} !important;
 }
 
 .btn.btn-primary:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+}
+
+.custom-modal {
+  --bs-modal-width: 800px !important;
+  --bs-modal-border-radius: 0px !important;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .form input{
