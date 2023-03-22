@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  nginx:
+    stdin_open: true
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3100:80"
+
+  api:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: "./server"
+    volumes:
+      - /app/server/.yarn
+      - ./server:/app
+      - .:/app
+      - /app/.yarn
+      - /app/node_modules
+    ports:
+      - "4000:80"
+
+  client:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    volumes:
+      - /app/client/.yarn
+      - ./client:/app
+      - /app/node_modules
+    ports:
+      - "3000:80"
+
+  adminer:
+    image: adminer:latest
+    restart: unless-stopped
+    ports:
+      - "8000:8080"

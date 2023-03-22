@@ -1,0 +1,46 @@
+:root {
+  --bd-purple: #4c0bce;
+  --bd-violet: #712cf9;
+  --bd-accent: #ffe484;
+  --bd-violet-rgb: 112.520718,44.062154,249.437846;
+  --bd-accent-rgb: 255,228,132;
+  --bd-pink-rgb: 214,51,132;
+  --bd-teal-rgb: 32,201,151;
+  --docsearch-primary-color: var(--bd-violet);
+  --docsearch-logo-color: var(--bd-violet);
+}
+
+.App {
+  text-align: center;
+}
+.card-title {
+  color: #282a35;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.btn.btn-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-cyan);
+  --bs-btn-border-color: var(--bs-cyan);
+  --bs-btn-text-align: center;
+  width: 100%;
+  --bs-btn-border-radius: .1rem;
+  --bs-btn-hover-color: var(--bs-cyan);
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 50%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 50%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 50%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 50%)};
+}
+
+.btn.btn-primary:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form input{
+  width: 250px;
+  margin: 10px;
+}
