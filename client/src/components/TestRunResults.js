@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from '../axios.js';
-import {Card} from 'react-bootstrap';
+import {Card, Row, Col} from 'react-bootstrap';
 import '../App.css';
-import {TestRunModal} from "./TestRunModal.js";
+import {TestRunModal} from './TestRunModal.js';
 
 export default class TestRunResults extends Component {
   constructor(props) {
@@ -13,6 +13,16 @@ export default class TestRunResults extends Component {
     };
   }
 
+  getTestRunStatus(testRun) {
+    if(testRun.includes('FAIL')) {
+      return this.RunResults = 'fail';
+    } else {
+      return this.RunResults = 'pass';
+    }
+  }
+
+  columnsPerRow = 4;
+
   componentDidMount(){
     this.getAllTestRuns();
   }
@@ -22,24 +32,28 @@ export default class TestRunResults extends Component {
         const allRuns = response.data;
         console.log(allRuns);
         const runs = allRuns.map(u =>
-          <Card className='custom' key='{runs.id}'>
-            <Card.Body>
-                <Card.Title className="card-title">
-                  {u.name}
-                </Card.Title>
-                <Card.Text>
-                  <div>
-                    <div className="panel-body">
-                      <div>Browser: {u.browser}</div>
-                      <div>Environment: {u.env}</div>
-                      <div>Endpoint: {u.endpoint}</div>
-                    </div>
-                  </div>
-                </Card.Text>
-              <TestRunModal data={allRuns}>
-              </TestRunModal>
-            </Card.Body>
-          </Card>
+          <>
+            <Col key='{runs.id}'>
+              <Card className={`custom ${this.getTestRunStatus(u.status)}`}>
+                <Card.Body>
+                    <Card.Title className="card-title">
+                      {u.name}
+                    </Card.Title>
+                    <Card.Text as="div">
+                      <div>
+                        <div className="panel-body">
+                          <div>Browser: {u.browser}</div>
+                          <div>Environment: {u.env}</div>
+                          <div>OS: MAC</div>
+                        </div>
+                      </div>
+                    </Card.Text>
+                  <TestRunModal data={u} test_reports={u.test_reports} >
+                  </TestRunModal>
+                </Card.Body>
+              </Card>
+            </Col>
+          </>
         )
         this.setState({runs});
       })
@@ -48,7 +62,9 @@ export default class TestRunResults extends Component {
   render() {
     return (
       <div>
-        {this.state.runs}
+          <Row sm={this.columnsPerRow}>
+            {this.state.runs}
+          </Row>
       </div>
     )
   }

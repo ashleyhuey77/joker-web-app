@@ -1,17 +1,17 @@
 version: '3.8'
 
 services:
-  nginx:
-    stdin_open: true
-    depends_on:
-      - api
-      - client
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - "3100:80"
+  #nginx:
+   # stdin_open: true
+   # depends_on:
+    #  - api
+     # - client
+   # restart: always
+   # build:
+    #  dockerfile: Dockerfile
+     # context: ./nginx
+    #ports:
+     # - "3100:80"
 
   api:
     stdin_open: true
@@ -25,22 +25,29 @@ services:
       - /app/.yarn
       - /app/node_modules
     ports:
-      - "4000:80"
+      - "4000:4000"
+    expose:
+      - "4000"
+    network_mode: host
 
   client:
     stdin_open: true
     build:
       dockerfile: Dockerfile
       context: ./client
+    restart: always
+    environment:
+      - RACK_ENV=development
     volumes:
       - /app/client/.yarn
       - ./client:/app
       - /app/node_modules
     ports:
-      - "3000:80"
+      - "3000:3000"
+    expose:
+      - "3000"
+    networks:
+      - react-express
 
-  adminer:
-    image: adminer:latest
-    restart: unless-stopped
-    ports:
-      - "8000:8080"
+networks:
+  react-express:

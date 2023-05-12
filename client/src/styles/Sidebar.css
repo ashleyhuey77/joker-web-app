@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.nav-item{
+    margin-bottom: 8px;
+}
+
+#navbar {
+    width: 15%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.fs-4{
+    font-size: 40px;
+}
+
+.sidebar-icons {
+    width: 18%;
+    font-size: 18px;
+}
+
+#header-icon {
+    padding-right: 20%;
+    font-size: 25px;
+}
+
+#sidebar-footer{
+    textAlign: "center";
+}

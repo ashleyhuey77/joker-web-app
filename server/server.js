@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const testRuns = require('./routes/testRunsRoutes');
+const testRuns = require('./routes/suitesRoutes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const conn = require('./helpers/connections');
