@@ -1,4 +1,3 @@
-import {Component} from 'react';
 import '../../../styles/Dashboard.css';
 import {InfoCards} from "./InfoCards.js";
 export function Dashboard() {

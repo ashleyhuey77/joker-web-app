@@ -1,4 +1,7 @@
-FROM node:alpine as build-deps
+FROM node:latest
+
+#RUN apk add --no-cache python2 g++ make
+
 WORKDIR /app
 COPY package.json yarn.lock ./
 COPY . .

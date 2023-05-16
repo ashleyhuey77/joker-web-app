@@ -50,7 +50,7 @@ export function SidebarMenuItem(props) {
       <div className="nav-link text-white" aria-current="page">
         <i className={props.icon + " sidebar-icons"}>
         </i>
-        <Link to={`/${props.title}`}>{props.children}</Link>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/${props.title}`}>{props.children}</Link>
       </div>
     </li>
   );

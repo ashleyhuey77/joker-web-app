@@ -1,9 +1,9 @@
-import {Component} from 'react';
+import {TestSuites} from "./TestSuites.js";
 
 export function Suites() {
     return (
       <>
-        <div>Testing</div>
+        <TestSuites />
       </>
     )
 }

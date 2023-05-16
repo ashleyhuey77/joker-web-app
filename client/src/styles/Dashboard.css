@@ -67,7 +67,7 @@ body {
 .pass-percentage-chart {
     width: 200px;
     height: 200px;
-    margin-top: 30px;
+    margin-top: 85px;
     margin-left: 20px;
 }
 
@@ -127,4 +127,8 @@ div[class*='env-list'] .list-group-item {
     background: #212529;
     color: #fff;
     border-color: #fff;
+}
+
+canvas {
+    position: relative;
 }

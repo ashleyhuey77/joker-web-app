@@ -1,6 +1,6 @@
-import {PassPercentage} from "../../global/widgets/PassPercentage.js";
-import {Trends} from "../../global/widgets/Trends.js";
-import ProgressBar from "../../global/widgets/ProgressBar.js";
+import {PassPercentage} from "./PassPercentage.js";
+//import {Trends} from "../../global/widgets/Trends.js";
+//import CustomProgressBar from "../../global/widgets/CustomProgressBar.js";
 import {Card, Col, Row} from "react-bootstrap";
 import {useCollapse} from 'react-collapsed';
 import {ListGroup} from 'react-bootstrap';
@@ -57,7 +57,6 @@ function PercentageChartInfo() {
 function TrendChartInfo() {
   return (
     <Col className="trends-chart">
-      <Trends></Trends>
     </Col>
   )
 }
@@ -96,9 +95,6 @@ function EnvironmentDetails(props) {
           {props.testName}
         </Col>
         <Col className="suite-progress">
-          <ProgressBar>
-
-          </ProgressBar>
         </Col>
       </Row>
     } content={
