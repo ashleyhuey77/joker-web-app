@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const schema = require('../models/suite').Suite;
+const logger = require('../../client/src/components/global/helpers/Logger.js').default;
 //SCHEMAS
 const Suite = mongoose.model('Suite', schema);
 
@@ -19,7 +20,7 @@ exports.add_test_run = async (request, response) => {
         endpoint: request.body.endpoint,
         test_reports: []
     }).then(response.send(request.body).status(200)).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
     await Suite.updateOne({id: request.body.id}, {
         $addToSet:
@@ -31,20 +32,20 @@ exports.add_test_run = async (request, response) => {
 
 exports.delete_test_run = (request, response) => {
     Suite.deleteOne({ id: request.params.id }, {lean: true}).then(response.send(response.body).status(200)).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
 };
 
 exports.test_runs_list = async (request, response) => {
     const resp = await Suite.find({});
     response.send(resp).status(200).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
 };
 
 exports.test_run = async (request, response) => {
     const resp = await Suite.findOne({id: request.params.id}).lean();
     response.send(resp).status(200).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
 };

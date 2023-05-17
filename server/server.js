@@ -5,7 +5,7 @@ const testRuns = require('./routes/suitesRoutes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const conn = require('./helpers/connections');
-import logger from './Logger.js'
+const logger = require('../../client/src/components/global/helpers/Logger.js').default;
 
 const app = express();
 

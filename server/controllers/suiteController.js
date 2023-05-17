@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 //const TestReport = require('../models/testReport');
+const logger = require('../../client/src/components/global/helpers/Logger.js').default;
 const schema = require('../models/test').TestReport;
 //SCHEMAS
 const TestReport = mongoose.model('TestReport', schema);
@@ -16,7 +17,7 @@ exports.add_test_report = async (request, response) => {
         name: request.body.name,
         test_steps: []
     }).then(response.send(request.body).status(200)).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
     await TestReport.updateOne({id: request.body.id}, {
         $addToSet:
@@ -28,13 +29,13 @@ exports.add_test_report = async (request, response) => {
 
 exports.delete_test_report = (request, response) => {
     TestReport.deleteOne({ id: request.params.id }, {lean: true}).then(response.send(response.body).status(200)).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
 };
 
 exports.test_report = async (request, response) => {
     const resp = await TestReport.findOne({id: request.params.id}).lean();
     response.send(resp).status(200).catch((error) => {
-      console.error(error);
+      logger.error(error);
     });
 };
