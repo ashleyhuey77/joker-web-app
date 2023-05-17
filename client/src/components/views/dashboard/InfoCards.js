@@ -1,3 +1,4 @@
+import React from 'react';
 import {PassPercentage} from "./PassPercentage.js";
 import {TrendsChart} from "./TrendsChart.js";
 import {TestProgress} from "./ProgressBar.js";

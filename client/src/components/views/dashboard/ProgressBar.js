@@ -1,3 +1,4 @@
+import React from 'react';
 import ProgressBar from 'react-bootstrap/esm/ProgressBar.js';
 import {Component} from "react";
 

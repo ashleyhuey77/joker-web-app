@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../../styles/Suites.css';
 import GridLayout from "react-grid-layout";
 export function SuitesContent() {
