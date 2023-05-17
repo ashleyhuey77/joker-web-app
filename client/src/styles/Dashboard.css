@@ -26,6 +26,7 @@ body {
     position: absolute;
     background: #212529;
     color: #fff;
+    font-weight: normal;
     border-radius: 0;
     -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
     -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
@@ -36,6 +37,7 @@ body {
     position: absolute;
     width: 200px;
     margin-left: -30px;
+    font-weight: normal;
     text-align: -webkit-left;
     font-size: 25px;
 }
@@ -45,6 +47,7 @@ body {
     width: 200px;
     margin-top: 18px;
     margin-left: 40px;
+    font-weight: normal;
     text-align: -webkit-center;
 }
 
@@ -55,7 +58,7 @@ body {
 
 .tc-text {
     font-size: 0.8em !important;
-    font-weight: 50;
+    font-weight: normal;
     margin-top: -25px;
     margin-left: 7px;
 }
@@ -78,9 +81,25 @@ body {
     margin-top: 30px;
 }
 
+.trend-card-body {
+    padding-top: 5px;
+}
+
+.trends {
+    margin-top: 50px;
+    border-radius: 0;
+    background: #212529;
+    height: 350px;
+}
+
 .env.col {
     margin-left: 78px;
     margin-top: -158px;
+}
+
+.env-card-title {
+    font-weight: normal;
+    font-size: 25px;
 }
 
 .env-info.card {
@@ -89,6 +108,8 @@ body {
     position: absolute;
     background: #212529;
     color: #fff;
+    font-weight: normal;
+    font-size: 25px;
     border-radius: 0;
     -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
     -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
@@ -97,10 +118,14 @@ body {
 
 .env-card-body {
     text-align: -webkit-left;
+    height: 280px;
 }
 
 .env-card-text {
-    margin-right: 230px;
+    overflow-y:scroll;
+    width: 459px;
+    margin-left: 5px;
+    margin-top: 1px;
 }
 
 .suite-name {
@@ -115,8 +140,33 @@ body {
 .suite-progress {
     position: absolute;
     width: 800px;
-    margin-left: 240px;
-    margin-top: 3px;
+    margin-left: 220px;
+    margin-top: 7px;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 5px;
+    width: 220px;
+    background: #212529;
+}
+
+.progress > .passing {
+    background-color: rgba(45,255,0,0.36);
+    border: 1px solid rgba(17,255,0,0.96);
+}
+
+.progress > .passing.zero {
+    border: 0px;
+}
+
+.progress > .failing.zero {
+    border: 0px;
+}
+
+.progress > .failing {
+    background-color: rgba(255,0,51,0.3);
+    border: 1px solid rgb(255,2,56);
 }
 
 .MuiLinearProgress-bar {
@@ -126,6 +176,7 @@ body {
 div[class*='env-list'] .list-group-item {
     background: #212529;
     color: #fff;
+    font-weight: normal;
     border-color: #fff;
 }
 

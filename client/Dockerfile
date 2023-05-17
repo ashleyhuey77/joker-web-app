@@ -1,11 +1,11 @@
-FROM node:latest
+FROM node:16.20.0-alpine
 
 #RUN apk add --no-cache python2 g++ make
 
 WORKDIR /app
-COPY package.json yarn.lock ./
+COPY package.json ./
+COPY yarn.lock ./
 COPY . .
 RUN yarn install
 EXPOSE 3000
-CMD ["yarn", "react-scripts", "test", "--runInBand"]
 CMD ["yarn", "start"]

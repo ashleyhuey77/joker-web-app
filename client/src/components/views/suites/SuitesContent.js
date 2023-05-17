@@ -1,6 +1,6 @@
 import '../../../styles/Suites.css';
 import GridLayout from "react-grid-layout";
-export function TestSuites() {
+export function SuitesContent() {
   const layout = [
     { i: "suites", x: 0, y: 0, w: 1, h: 2,
       static: false,

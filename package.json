@@ -1,6 +1,7 @@
 {
   "name": "joker-web-app",
   "packageManager": "yarn@3.5.0",
+  "type": "module",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

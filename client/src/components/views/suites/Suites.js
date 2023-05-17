@@ -1,9 +1,9 @@
-import {TestSuites} from "./TestSuites.js";
+import {SuitesContent} from "./SuitesContent.js";
 
 export function Suites() {
     return (
       <>
-        <TestSuites />
+        <SuitesContent />
       </>
     )
 }

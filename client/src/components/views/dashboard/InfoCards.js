@@ -1,6 +1,6 @@
 import {PassPercentage} from "./PassPercentage.js";
-//import {Trends} from "../../global/widgets/Trends.js";
-//import CustomProgressBar from "../../global/widgets/CustomProgressBar.js";
+import {TrendsChart} from "./TrendsChart.js";
+import {TestProgress} from "./ProgressBar.js";
 import {Card, Col, Row} from "react-bootstrap";
 import {useCollapse} from 'react-collapsed';
 import {ListGroup} from 'react-bootstrap';
@@ -57,6 +57,11 @@ function PercentageChartInfo() {
 function TrendChartInfo() {
   return (
     <Col className="trends-chart">
+      <Card className="trends">
+        <Card.Body className="trend-card-body">
+          <TrendsChart></TrendsChart>
+        </Card.Body>
+      </Card>
     </Col>
   )
 }
@@ -72,13 +77,15 @@ function EnvironmentInfo() {
               </Card.Title>
               <hr />
               <Card.Text as="div" className="env-card-text">
+
                   <div className="env-card-body">
-                    <EnvironmentDetails testName="sign_in_tests" date="05/01/2023 09:58" env="Staging" browser="Chrome" os="Mac"></EnvironmentDetails>
-                    <EnvironmentDetails testName="sign_in_tests" date="05/01/2023 10:50" env="dev" browser="Chrome" os="Mac"></EnvironmentDetails>
-                    <EnvironmentDetails testName="shopping_cart_tests" date="05/02/2023 11:30" env="Prod" browser="Firefox" os="Linux - Centos7"></EnvironmentDetails>
-                    <EnvironmentDetails testName="new_user_tests" date="05/03/2023 12:41" env="Staging" browser="Chrome" os="Windows"></EnvironmentDetails>
-                    <EnvironmentDetails testName="shopping_cart_tests" date="05/04/2023 13:23" env="dev" browser="Chrome" os="Linux - RHEL"></EnvironmentDetails>
+                    <EnvironmentDetails testName="sign_in_tests" date="05/01/2023 09:58" env="Staging" browser="Chrome" os="Mac" pass={85} fail={15}></EnvironmentDetails>
+                    <EnvironmentDetails testName="sign_in_tests" date="05/01/2023 10:50" env="dev" browser="Chrome" os="Mac" pass={100} fail={0}></EnvironmentDetails>
+                    <EnvironmentDetails testName="shopping_cart_tests" date="05/02/2023 11:30" env="Prod" browser="Firefox" os="Linux - Centos7" pass={0} fail={100}></EnvironmentDetails>
+                    <EnvironmentDetails testName="new_user_tests" date="05/03/2023 12:41" env="Staging" browser="Chrome" os="Windows" pass={90} fail={10}></EnvironmentDetails>
+                    <EnvironmentDetails testName="shopping_cart_tests" date="05/04/2023 13:23" env="dev" browser="Chrome" os="Linux - RHEL" pass={50} fail={50}></EnvironmentDetails>
                   </div>
+
               </Card.Text>
             </Card.Body>
           </Card>
@@ -95,6 +102,7 @@ function EnvironmentDetails(props) {
           {props.testName}
         </Col>
         <Col className="suite-progress">
+          <TestProgress pass={props.pass} fail={props.fail}></TestProgress>
         </Col>
       </Row>
     } content={

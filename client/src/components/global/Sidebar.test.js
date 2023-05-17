@@ -4,7 +4,14 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import {Sidebar} from './Sidebar.js';
 import {BrowserRouter} from "react-router-dom";
 import {waitFor} from "@testing-library/dom";
-import {Content} from "./Content.js";;
+import {Content} from "./Content.js";
+import {TestProgress} from "../views/dashboard/ProgressBar.js";
+
+const mockPBar = TestProgress;
+
+jest.mock('../views/dashboard/ProgressBar', () => ({
+  TestProgress: () => mockPBar,
+}));
 
 beforeAll(() => {
   window.matchMedia = window.matchMedia || function() {
@@ -54,6 +61,9 @@ describe("Side Navigation Bar", () => {
       expect(window.location.href).toBe('http://localhost/dashboard');
       expect(screen.getByText('Total Pass %')).toBeVisible();
       expect(screen.getByText('Test Cases')).toBeVisible();
+      expect(screen.getByText('Environment')).toBeVisible();
+      expect(window.document.querySelector('.trends.card')).toBeVisible();
+      expect(window.document.querySelectorAll('.trends.card').length).toBe(1);
     })
   });
   test("Should render suites when suites link is clicked", async () => {
@@ -66,6 +76,9 @@ describe("Side Navigation Bar", () => {
       expect(window.location.href).toBe('http://localhost/suites');
       expect(screen.queryByText('Total Pass %')).toBeNull();
       expect(screen.queryByText('Test Cases')).toBeNull();
+      expect(screen.queryByText('Environment')).toBeNull();
+      expect(window.document.querySelector('.trends.card')).toBeNull();
+      expect(window.document.querySelectorAll('.trends.card').length).toBe(0);
       expect(screen.getByText('Steps')).toBeVisible();
     })
   });
