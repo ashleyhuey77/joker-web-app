@@ -4,18 +4,20 @@ const schema = require('../models/test').TestReport;
 //SCHEMAS
 const TestReport = mongoose.model('TestReport', schema);
 
-exports.index = (request, response, next) => {
+exports.index = (request, response) => {
     response.render('base', {
 
     });
 };
 
-exports.add_test_report = async (request, response, next) => {
+exports.add_test_report = async (request, response) => {
     TestReport.create({
         id: request.body.id,
         name: request.body.name,
         test_steps: []
-    }).then(response.send(request.body).status(200));
+    }).then(response.send(request.body).status(200)).catch((error) => {
+      console.error(error);
+    });
     await TestReport.updateOne({id: request.body.id}, {
         $addToSet:
             {
@@ -24,11 +26,15 @@ exports.add_test_report = async (request, response, next) => {
     });
 };
 
-exports.delete_test_report = (request, response, next) => {
-    TestReport.deleteOne({ id: request.params.id }, {lean: true}).then(response.send(response.body).status(200))
+exports.delete_test_report = (request, response) => {
+    TestReport.deleteOne({ id: request.params.id }, {lean: true}).then(response.send(response.body).status(200)).catch((error) => {
+      console.error(error);
+    });
 };
 
-exports.test_report = async (request, response, next) => {
+exports.test_report = async (request, response) => {
     const resp = await TestReport.findOne({id: request.params.id}).lean();
-    response.send(resp).status(200);
+    response.send(resp).status(200).catch((error) => {
+      console.error(error);
+    });;
 };

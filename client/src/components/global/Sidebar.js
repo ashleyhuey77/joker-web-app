@@ -57,7 +57,7 @@ export function SidebarMenuItem(props) {
   );
 }
 
-export function SidebarFooter(props) {
+export function SidebarFooter() {
   return (
     <>
       <hr />

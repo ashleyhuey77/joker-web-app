@@ -7,7 +7,6 @@ import {Component} from "react";
       super(props);
       this.passValue = props.pass;
       this.failValue = props.fail;
-      this.setBorder = this.setBorder;
     }
     setBorder(value) {
       let result = "";
@@ -15,7 +14,7 @@ import {Component} from "react";
         result = " zero"
         console.log(result);
       }
-      return result;
+      return result
     }
   render () {
     return (
