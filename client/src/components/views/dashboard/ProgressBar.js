@@ -12,7 +12,6 @@ import {Component} from "react";
       let result = "";
       if (value === 0) {
         result = " zero"
-        console.log(result);
       }
       return result
     }

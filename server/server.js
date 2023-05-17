@@ -5,6 +5,7 @@ const testRuns = require('./routes/suitesRoutes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const conn = require('./helpers/connections');
+import logger from './Logger.js'
 
 const app = express();
 
@@ -22,5 +23,5 @@ conn.connect();
 app.use("/", testRuns);
 
 app.listen(PORT, HOST, () => {
-    console.log(`Running on http://${HOST}:${PORT}`);
+    logger.info(`Running on http://${HOST}:${PORT}`);
 });

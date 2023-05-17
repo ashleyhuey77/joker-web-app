@@ -1,6 +1,6 @@
 import React from 'react';
-import {Dashboard} from "../views/dashboard/Dashboard.js";
-import {Suites} from "../views/suites/Suites.js";
+import {Dashboard} from "../../views/dashboard/Dashboard.js";
+import {Suites} from "../../views/suites/Suites.js";
 import {Route, Routes} from "react-router-dom";
 
 export function Content() {

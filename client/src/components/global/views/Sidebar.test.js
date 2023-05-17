@@ -5,7 +5,7 @@ import {Sidebar} from './Sidebar.js';
 import {BrowserRouter} from "react-router-dom";
 import {waitFor} from "@testing-library/dom";
 import {Content} from "./Content.js";
-import {TestProgress} from "../views/dashboard/ProgressBar.js";
+import {TestProgress} from "../../views/dashboard/ProgressBar.js";
 
 const mockPBar = TestProgress;
 

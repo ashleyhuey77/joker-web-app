@@ -41,6 +41,7 @@
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom-fourteen": "^1.0.1",
     "jest-webpack-resolver": "^0.3.0",
+    "js-logging": "^0.1.0",
     "prop-types": "^15.8.1",
     "react": "latest",
     "react-bootstrap": "^2.7.2",

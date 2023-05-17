@@ -20,7 +20,7 @@ exports.add_test_run = async (request, response) => {
         test_reports: []
     }).then(response.send(request.body).status(200)).catch((error) => {
       console.error(error);
-    });;
+    });
     await Suite.updateOne({id: request.body.id}, {
         $addToSet:
             {
@@ -39,12 +39,12 @@ exports.test_runs_list = async (request, response) => {
     const resp = await Suite.find({});
     response.send(resp).status(200).catch((error) => {
       console.error(error);
-    });;
+    });
 };
 
 exports.test_run = async (request, response) => {
     const resp = await Suite.findOne({id: request.params.id}).lean();
     response.send(resp).status(200).catch((error) => {
       console.error(error);
-    });;
+    });
 };

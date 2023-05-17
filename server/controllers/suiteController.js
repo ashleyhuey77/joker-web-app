@@ -36,5 +36,5 @@ exports.test_report = async (request, response) => {
     const resp = await TestReport.findOne({id: request.params.id}).lean();
     response.send(resp).status(200).catch((error) => {
       console.error(error);
-    });;
+    });
 };

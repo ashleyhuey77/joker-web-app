@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
+import logger from './Logger.js'
 
 const test_run_controller = require('../controllers/testController');
 const test_report_controller = require('../controllers/suiteController');
 
 router.use((req, res, next) => {
-    console.log('Time: ', Date.now())
+    logger.info('Time: ', Date.now())
     next()
 })
 

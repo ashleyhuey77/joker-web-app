@@ -5811,6 +5811,7 @@ __metadata:
     jest-css-modules-transform: ^4.4.2
     jest-environment-jsdom-fourteen: ^1.0.1
     jest-webpack-resolver: ^0.3.0
+    js-logging: ^0.1.0
     prop-types: ^15.8.1
     react: latest
     react-bootstrap: ^2.7.2
@@ -11316,6 +11317,13 @@ __metadata:
   bin:
     jiti: bin/jiti.js
   checksum: 46c41cd82d01c6efdee3fc0ae9b3e86ed37457192d6366f19157d863d64961b07982ab04e9d5879576a1af99cc4d132b0b73b336094f86a5ce9fb1029ec2d29f
+  languageName: node
+  linkType: hard
+
+"js-logging@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "js-logging@npm:0.1.0"
+  checksum: 52f49954ea8242701b876b3152bd5f8d9558495b43d3093a17eb369820081b83281a500c01be29ba6da2e5214b5e5cd1935a051ac2520420478eefc77be8cf0c
   languageName: node
   linkType: hard
 
