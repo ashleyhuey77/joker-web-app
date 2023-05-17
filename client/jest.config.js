@@ -1,5 +1,6 @@
 const jestConfig = {
   verbose: true,
+  testEnvironment: 'environment-jsdom-fourteen',
   testEnvironmentOptions: {
     url: 'http://localhost'
   },
