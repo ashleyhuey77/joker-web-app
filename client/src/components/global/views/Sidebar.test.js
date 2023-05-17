@@ -9,7 +9,7 @@ import {TestProgress} from "../../views/dashboard/ProgressBar.js";
 
 const mockPBar = TestProgress;
 
-jest.mock('../views/dashboard/ProgressBar', () => ({
+jest.mock('../../views/dashboard/ProgressBar', () => ({
   TestProgress: () => mockPBar,
 }));
 
