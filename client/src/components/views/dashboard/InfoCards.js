@@ -17,8 +17,7 @@ export function InfoCards() {
         <TrendChartInfo></TrendChartInfo>
       </Row>
       <Row sm='1'>
-        <EnvironmentInfo testName="sign_in_tests" env="Staging" browser="Chrome" os="MAC">
-        </EnvironmentInfo>
+        <EnvironmentInfo />
       </Row>
     </>
   )
@@ -97,32 +96,40 @@ function EnvironmentInfo() {
 
 function EnvironmentDetails(props) {
   return (
-    <Collapsible title={
-      <Row sm='2' className="env-rows">
-        <Col className="suite-name">
-          {props.testName}
-        </Col>
-        <Col className="suite-progress">
-          <TestProgress pass={props.pass} fail={props.fail}></TestProgress>
-        </Col>
-      </Row>
-    } content={
-      <ListGroup className="env-list" variant="flush">
-        <ListGroup.Item>Date Run: {props.date}</ListGroup.Item>
-        <ListGroup.Item>Env: {props.env}</ListGroup.Item>
-        <ListGroup.Item>Browser: {props.browser}</ListGroup.Item>
-        <ListGroup.Item>OS: {props.os}</ListGroup.Item>
-      </ListGroup>
-    }>
-    </Collapsible>
+    <Collapsible title={ CollapsibleTitle(props) }
+                 content={ CollapsibleContent(props) } />
   )
 }
 
+function CollapsibleTitle(props) {
+  return (
+    <Row sm='2' className="env-rows">
+      <Col className="suite-name">
+        {props.testName}
+      </Col>
+      <Col className="suite-progress">
+        <TestProgress pass={props.pass} fail={props.fail} />
+      </Col>
+    </Row>
+  )
+}
+
+function CollapsibleContent(props) {
+  return (
+    <ListGroup className="env-list" variant="flush">
+      <ListGroup.Item>Date Run: {props.date}</ListGroup.Item>
+      <ListGroup.Item>Env: {props.env}</ListGroup.Item>
+      <ListGroup.Item>Browser: {props.browser}</ListGroup.Item>
+      <ListGroup.Item>OS: {props.os}</ListGroup.Item>
+    </ListGroup>
+  )
+}
 function Collapsible(props) {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+  const headerName = "header " + {...getToggleProps()};
   return (
     <div className="collapsible">
-      <div className="header" {...getToggleProps()}>
+      <div className={headerName}>
         {isExpanded ? props.title : props.title}
       </div>
       <div {...getCollapseProps()}>

@@ -1,26 +1,21 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/esm/ProgressBar.js';
-import {Component} from "react";
 
-  export class TestProgress extends Component {
-    constructor(props) {
-      super(props);
-      this.passValue = props.pass;
-      this.failValue = props.fail;
-    }
-    setBorder(value) {
-      let result = "";
-      if (value === 0) {
-        result = " zero"
-      }
-      return result
-    }
-  render () {
+  export function TestProgress(props) {
+    const passClassName = "passing" + setBorder(props.pass);
+    const failClassName = "failing" + setBorder(props.fail);
     return (
       <ProgressBar>
-        <ProgressBar className={"passing" + this.setBorder(this.passValue)} now={this.passValue} key={1} />
-        <ProgressBar className={"failing" + this.setBorder(this.failValue)} now={this.failValue} key={2} />
+        <ProgressBar className={passClassName} now={props.pass} key={1} />
+        <ProgressBar className={failClassName} now={props.fail} key={2} />
       </ProgressBar>
     )
-  };
+}
+
+function setBorder(value) {
+  let result = "";
+  if (value === 0) {
+    result = " zero"
+  }
+  return result
 }

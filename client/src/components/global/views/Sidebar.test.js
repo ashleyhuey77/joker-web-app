@@ -38,11 +38,15 @@ function NavBar() {
       <Content />
     </BrowserRouter>
   );
+
+  delete window.location;
+  window.location = { reload: jest.fn() }
+
 }
 
 describe("Side Navigation Bar", () => {
   test("Should render all links correctly", () => {
-    render(<NavBar/>);
+    render(<NavBar />);
     const dash = screen.getByText('Dashboard')
     const suites = screen.getByText('Suites')
     expect(dash).toBeVisible();
@@ -52,8 +56,8 @@ describe("Side Navigation Bar", () => {
   });
 
   test("Should render dashboard when dashboard link is clicked", async () => {
-    window.location.href = 'http://localhost/'
-    render(<NavBar/>);
+    window.location.assign('http://localhost/');
+    render(<NavBar />);
     expect(window.location.href).toBe('http://localhost/');
     fireEvent.click(screen.getByRole('link', { name: 'Dashboard' }));
     await waitFor(() => {
@@ -67,7 +71,7 @@ describe("Side Navigation Bar", () => {
     })
   });
   test("Should render suites when suites link is clicked", async () => {
-    window.location.href = 'http://localhost/'
+    window.location.assign('http://localhost/');
     render(<NavBar/>);
     expect(window.location.href).toBe('http://localhost/dashboard');
     fireEvent.click(screen.getByRole('link', { name: 'Suites' }));
@@ -79,7 +83,7 @@ describe("Side Navigation Bar", () => {
       expect(screen.queryByText('Environment')).toBeNull();
       expect(window.document.querySelector('.trends.card')).toBeNull();
       expect(window.document.querySelectorAll('.trends.card').length).toBe(0);
-      expect(screen.getByText('Steps')).toBeVisible();
+      expect(screen.getByText('Test Steps')).toBeVisible();
     })
   });
 });
