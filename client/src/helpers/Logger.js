@@ -1,8 +1,6 @@
 import chalk from 'chalk';
 
 class Logger {
-  constructor() {
-  }
 
   static log(level, message) {
     const output = `${new Date().toISOString().replace('T',' ').split('.')[0]} ${level} ${message}`

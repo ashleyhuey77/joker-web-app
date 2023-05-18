@@ -1,12 +1,9 @@
 import chalk from 'chalk';
 
 class Logger {
-  constructor() {
-    this.name = name;
-  }
 
   static log(level, message) {
-    const output = `${new Date().toISOString().replace('T',' ').split('.')[0]} ${this.name} ${level} ${message}`
+    const output = `${new Date().toISOString().replace('T',' ').split('.')[0]} ${level} ${message}`
     console.log(output)
   }
 
