@@ -27,7 +27,7 @@
 }
 
 body {
-  background-image: url("../public/bg2.jpeg");
+  background-image: url("public/bg2.jpeg");
   background-size: contain;
   background-color: #cccccc;
   min-height: 100vh;

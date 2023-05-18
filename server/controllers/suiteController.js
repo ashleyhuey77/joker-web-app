@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 //const TestReport = require('../models/testReport');
-const logger = require('../../client/src/components/global/helpers/Logger.js').default;
+const logger = require('../utils/Logger.js').default;
 const schema = require('../models/test').TestReport;
 //SCHEMAS
 const TestReport = mongoose.model('TestReport', schema);

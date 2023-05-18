@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const logger = require('../../client/src/components/global/helpers/Logger.js').default;
+const logger = require('../utils/Logger.js').default;
 
 const test_run_controller = require('../controllers/testController');
 const test_report_controller = require('../controllers/suiteController');

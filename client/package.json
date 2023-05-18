@@ -1,6 +1,6 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "joker-web-app",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -30,6 +30,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
     "canvas": "^2.11.2",
+    "chalk": "^5.2.0",
     "chart.js": "^4.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.7",
@@ -41,9 +42,10 @@
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom-fourteen": "^1.0.1",
     "jest-webpack-resolver": "^0.3.0",
-    "js-logging": "^0.1.0",
     "prop-types": "^15.8.1",
+    "re-resizable": "^6.9.9",
     "react": "latest",
+    "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.7.2",
     "react-chartjs-2": "^5.2.0",
     "react-collapsed": "^4.0.2",
@@ -58,9 +60,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --runInBand",
-    "eject": "react-scripts eject"
+    "build": "react-scripts start",
+    "test": "react-scripts test --runInBand"
   },
   "eslintConfig": {
     "extends": [
@@ -82,5 +83,10 @@
   "devDependencies": {
     "eslint-config-react": "^1.1.7",
     "eslint-config-react-app": "^7.0.1"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

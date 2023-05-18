@@ -2779,10 +2779,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.6.1, @remix-run/router@npm:^1.6.1":
-  version: 1.6.1
-  resolution: "@remix-run/router@npm:1.6.1"
-  checksum: 4ca65d9c7d6fa277227ad8fd4ef53bebab99460b714d835b609c998f9a7e7c33a964ce2b8af853b50025a60d9113968f256abc5f71f451939ff14a5187d327fe
+"@remix-run/router@npm:1.6.2, @remix-run/router@npm:^1.6.1":
+  version: 1.6.2
+  resolution: "@remix-run/router@npm:1.6.2"
+  checksum: 5969d313bff6ba5c75917910090cebafda84b9d3b4b453fae6b3d60fea9f938078578ffca769c532ab7ce252cd4a207b78d1024d7c727ab80dd572e62fd3b3f2
   languageName: node
   linkType: hard
 
@@ -3429,9 +3429,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.1.7
-  resolution: "@types/node@npm:20.1.7"
-  checksum: b722794290d22db1741e739c256876ca774b76ea2d647d9ec9d52c49b1b01049cc6f6332499a01ac81d641e8d078b33e4c5c59e409db80390ac6b8d7ef0c08a7
+  version: 20.2.0
+  resolution: "@types/node@npm:20.2.0"
+  checksum: 9b937367448a07482af14e3518125ae531bff99e16d51e0945f4f93dbd7051d8a270811bdeb57f0b52c629fb0c9c401a238a7352dfbc87e26495b6f0f59cbdb6
   languageName: node
   linkType: hard
 
@@ -5600,6 +5600,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "chalk@npm:5.2.0"
+  checksum: 03d8060277de6cf2fd567dc25fcf770593eb5bb85f460ce443e49255a30ff1242edd0c90a06a03803b0466ff0687a939b41db1757bec987113e83de89a003caa
+  languageName: node
+  linkType: hard
+
 "char-regex@npm:^1.0.2":
   version: 1.0.2
   resolution: "char-regex@npm:1.0.2"
@@ -5767,66 +5774,6 @@ __metadata:
   checksum: 2ac8cd2b2f5ec986a3c743935ec85b07bc174d5421a5efc8017e1f146a1cf5f781ae962618f416352103b32c9cd7e203276e8c28241bbe946160cab16149fb68
   languageName: node
   linkType: hard
-
-"client@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "client@workspace:."
-  dependencies:
-    "@babel/core": ^7.21.8
-    "@babel/plugin-syntax-flow": ^7.18.6
-    "@babel/plugin-transform-runtime": ^7.21.4
-    "@babel/preset-env": ^7.21.5
-    "@babel/preset-react": ^7.18.6
-    "@babel/runtime": ^7.21.5
-    "@emotion/react": ^11.10.8
-    "@emotion/styled": ^11.10.8
-    "@fortawesome/fontawesome-svg-core": ^6.4.0
-    "@fortawesome/free-regular-svg-icons": ^6.4.0
-    "@fortawesome/free-solid-svg-icons": ^6.4.0
-    "@fortawesome/react-fontawesome": ^0.2.0
-    "@jest/globals": ^29.5.0
-    "@popperjs/core": ^2.11.6
-    "@remix-run/router": ^1.6.1
-    "@testing-library/dom": ^9.2.0
-    "@testing-library/jest-dom": ^5.16.5
-    "@testing-library/react": ^12.1.2
-    "@testing-library/user-event": ^14.4.3
-    axios: ^1.3.4
-    babel-cli: ^6.26.0
-    babel-jest: ^29.5.0
-    babel-plugin-transform-es2015-modules-commonjs: ^6.26.2
-    bootstrap: ^5.2.3
-    bootstrap-icons: ^1.10.5
-    canvas: ^2.11.2
-    chart.js: ^4.3.0
-    enzyme: ^3.11.0
-    enzyme-adapter-react-16: ^1.15.7
-    enzyme-to-json: ^3.6.2
-    eslint: ^8.36.0
-    eslint-config-react: ^1.1.7
-    eslint-config-react-app: ^7.0.1
-    faker: ^6.6.6
-    history: ^5.3.0
-    jest: ^29.5.0
-    jest-css-modules-transform: ^4.4.2
-    jest-environment-jsdom-fourteen: ^1.0.1
-    jest-webpack-resolver: ^0.3.0
-    js-logging: ^0.1.0
-    prop-types: ^15.8.1
-    react: latest
-    react-bootstrap: ^2.7.2
-    react-chartjs-2: ^5.2.0
-    react-collapsed: ^4.0.2
-    react-dom: latest
-    react-grid-layout: ^1.3.4
-    react-is: latest
-    react-router: ^6.11.1
-    react-router-dom: ^6.11.1
-    react-scripts: ^5.0.1
-    react-test-renderer: latest
-    styled-components: ^5.3.10
-  languageName: unknown
-  linkType: soft
 
 "cliui@npm:^7.0.2":
   version: 7.0.4
@@ -7101,9 +7048,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.397
-  resolution: "electron-to-chromium@npm:1.4.397"
-  checksum: d3551c0624d4eb29a514ef5e2161beb62c06c359c5340e765d349ea114e0eaf6a13eb4adc655d7eec880b0edcb493118888ce07b37e92476baf05ec5a96e99a3
+  version: 1.4.399
+  resolution: "electron-to-chromium@npm:1.4.399"
+  checksum: 51995e6e4dd6d2f630d56b21bd0ae47d8078dc7414b9648e644ba11fad99631da742ffd7a0f8af0abcb0bdb1749a678f95c87ead9b604fbc4625395b4236c94a
   languageName: node
   linkType: hard
 
@@ -11320,12 +11267,67 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-logging@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "js-logging@npm:0.1.0"
-  checksum: 52f49954ea8242701b876b3152bd5f8d9558495b43d3093a17eb369820081b83281a500c01be29ba6da2e5214b5e5cd1935a051ac2520420478eefc77be8cf0c
-  languageName: node
-  linkType: hard
+"joker-web-app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "joker-web-app@workspace:."
+  dependencies:
+    "@babel/core": ^7.21.8
+    "@babel/plugin-syntax-flow": ^7.18.6
+    "@babel/plugin-transform-runtime": ^7.21.4
+    "@babel/preset-env": ^7.21.5
+    "@babel/preset-react": ^7.18.6
+    "@babel/runtime": ^7.21.5
+    "@emotion/react": ^11.10.8
+    "@emotion/styled": ^11.10.8
+    "@fortawesome/fontawesome-svg-core": ^6.4.0
+    "@fortawesome/free-regular-svg-icons": ^6.4.0
+    "@fortawesome/free-solid-svg-icons": ^6.4.0
+    "@fortawesome/react-fontawesome": ^0.2.0
+    "@jest/globals": ^29.5.0
+    "@popperjs/core": ^2.11.6
+    "@remix-run/router": ^1.6.1
+    "@testing-library/dom": ^9.2.0
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^12.1.2
+    "@testing-library/user-event": ^14.4.3
+    axios: ^1.3.4
+    babel-cli: ^6.26.0
+    babel-jest: ^29.5.0
+    babel-plugin-transform-es2015-modules-commonjs: ^6.26.2
+    bootstrap: ^5.2.3
+    bootstrap-icons: ^1.10.5
+    canvas: ^2.11.2
+    chalk: ^5.2.0
+    chart.js: ^4.3.0
+    enzyme: ^3.11.0
+    enzyme-adapter-react-16: ^1.15.7
+    enzyme-to-json: ^3.6.2
+    eslint: ^8.36.0
+    eslint-config-react: ^1.1.7
+    eslint-config-react-app: ^7.0.1
+    faker: ^6.6.6
+    history: ^5.3.0
+    jest: ^29.5.0
+    jest-css-modules-transform: ^4.4.2
+    jest-environment-jsdom-fourteen: ^1.0.1
+    jest-webpack-resolver: ^0.3.0
+    prop-types: ^15.8.1
+    re-resizable: ^6.9.9
+    react: latest
+    react-app-rewired: ^2.2.1
+    react-bootstrap: ^2.7.2
+    react-chartjs-2: ^5.2.0
+    react-collapsed: ^4.0.2
+    react-dom: latest
+    react-grid-layout: ^1.3.4
+    react-is: latest
+    react-router: ^6.11.1
+    react-router-dom: ^6.11.1
+    react-scripts: ^5.0.1
+    react-test-renderer: latest
+    styled-components: ^5.3.10
+  languageName: unknown
+  linkType: soft
 
 "js-sdsl@npm:^4.1.4":
   version: 4.4.0
@@ -14427,6 +14429,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"re-resizable@npm:^6.9.9":
+  version: 6.9.9
+  resolution: "re-resizable@npm:6.9.9"
+  peerDependencies:
+    react: ^16.13.1 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
+  checksum: a2c8bfe86646fb02d5c9c624b1da26f9e6a5e2f552cd96ce4db690588bee6b21177065ce8e98646c6ca0b1a9c4ce233824b75eb346800d8248ac8a87b40f1b28
+  languageName: node
+  linkType: hard
+
 "react-app-polyfill@npm:^3.0.0":
   version: 3.0.0
   resolution: "react-app-polyfill@npm:3.0.0"
@@ -14438,6 +14450,19 @@ __metadata:
     regenerator-runtime: ^0.13.9
     whatwg-fetch: ^3.6.2
   checksum: 1bb031080af15397d6eb9c69a0c2e93799991f7197a086e4409ba719398f1256b542a3d6c9a34673d516c684eef3e8226c99b335982593851f58f65f6e43571b
+  languageName: node
+  linkType: hard
+
+"react-app-rewired@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "react-app-rewired@npm:2.2.1"
+  dependencies:
+    semver: ^5.6.0
+  peerDependencies:
+    react-scripts: ">=2.1.3"
+  bin:
+    react-app-rewired: bin/index.js
+  checksum: 0b330c2b46413dc5fbb68e68c07704830397b1cfc8335f65d8f856bfbb6c4d8259fad049fc2a117c18794f321e726b844649266f42ff4c3fa044f00be48c1850
   languageName: node
   linkType: hard
 
@@ -14618,26 +14643,26 @@ __metadata:
   linkType: hard
 
 "react-router-dom@npm:^6.11.1":
-  version: 6.11.1
-  resolution: "react-router-dom@npm:6.11.1"
+  version: 6.11.2
+  resolution: "react-router-dom@npm:6.11.2"
   dependencies:
-    "@remix-run/router": 1.6.1
-    react-router: 6.11.1
+    "@remix-run/router": 1.6.2
+    react-router: 6.11.2
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 44566e10cb1ff475c73be47425dba66e8e834e695e80c572c63ca82543ad03d41f4a1d8e974bf998143150f497792f74ba99714b1219df1c923c62a3b67f187b
+  checksum: ba44ff37f2956bc18991f2eedb32a3fa46d35832f61ded6c5d167e853ca289868fca6635467866280c73bc3da00dce8437dbbec57da100c0a3e3e3850af00b83
   languageName: node
   linkType: hard
 
-"react-router@npm:6.11.1, react-router@npm:^6.11.1":
-  version: 6.11.1
-  resolution: "react-router@npm:6.11.1"
+"react-router@npm:6.11.2, react-router@npm:^6.11.1":
+  version: 6.11.2
+  resolution: "react-router@npm:6.11.2"
   dependencies:
-    "@remix-run/router": 1.6.1
+    "@remix-run/router": 1.6.2
   peerDependencies:
     react: ">=16.8"
-  checksum: c5cafbaac13564d0e325f84ce6e4cbc42de5c381b0f619209f3b101d2b6eae4a8f9ee87b492875e869909dd9bb549d05d2f677085708f79622b872bd45d14bbb
+  checksum: e47f875dca70033a3b42704cb5ec076b60f9629a5cdc3be613707f3d5a5706123fb80301037455c285c6d5a1011b443e1784e0103969ebfac7071648d360c413
   languageName: node
   linkType: hard
 
@@ -15539,7 +15564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.5.0, semver@npm:^5.7.0, semver@npm:^5.7.1":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.5.0, semver@npm:^5.6.0, semver@npm:^5.7.0, semver@npm:^5.7.1":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:
@@ -16619,8 +16644,8 @@ __metadata:
   linkType: hard
 
 "terser-webpack-plugin@npm:^5.2.5, terser-webpack-plugin@npm:^5.3.7":
-  version: 5.3.8
-  resolution: "terser-webpack-plugin@npm:5.3.8"
+  version: 5.3.9
+  resolution: "terser-webpack-plugin@npm:5.3.9"
   dependencies:
     "@jridgewell/trace-mapping": ^0.3.17
     jest-worker: ^27.4.5
@@ -16636,7 +16661,7 @@ __metadata:
       optional: true
     uglify-js:
       optional: true
-  checksum: 0ffc2a1949b1fd60ef9c815c4629b9817656db612bb58c5db96e3b04204c86afd142b115392e48733364edc7bf95131f54c10174c05f046ba8f2adead6b06c3c
+  checksum: 41705713d6f9cb83287936b21e27c658891c78c4392159f5148b5623f0e8c48559869779619b058382a4c9758e7820ea034695e57dc7c474b4962b79f553bc5f
   languageName: node
   linkType: hard
 
@@ -16879,9 +16904,9 @@ __metadata:
   linkType: hard
 
 "tslib@npm:^2.0.3, tslib@npm:^2.4.0":
-  version: 2.5.0
-  resolution: "tslib@npm:2.5.0"
-  checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  version: 2.5.1
+  resolution: "tslib@npm:2.5.1"
+  checksum: 535e41e956b32d21aeff007a2c74989d1a6bf3fecb2b0141d80e5b9920bf90e23b4f0cd3772704bc03637c762dbdc1a314d75a407dd7189afbe3e83d80df9392
   languageName: node
   linkType: hard
 
@@ -17513,8 +17538,8 @@ __metadata:
   linkType: hard
 
 "webpack@npm:^5.64.4":
-  version: 5.82.1
-  resolution: "webpack@npm:5.82.1"
+  version: 5.83.1
+  resolution: "webpack@npm:5.83.1"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^1.0.0
@@ -17545,7 +17570,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 747ee7ebd238c15249c2652060e3c6ca6d62cc66dcf7e4e2824ecd4875b7ea5e01fce8f4179080a3e84dfdb3c8d0992700444c7c5a05ef47b38c0623d3ac76de
+  checksum: 219d5ef50380bc0fd3702ed17feddf13819d8173b78f7a5b857dc74ac177e63d1f79c050792754411cc088bbc02e0971b989efddadbb8e393cf27d64c0ad9ff8
   languageName: node
   linkType: hard
 

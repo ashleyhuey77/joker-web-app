@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const schema = require('../models/suite').Suite;
-const logger = require('../../client/src/components/global/helpers/Logger.js').default;
+const logger = require('../utils/Logger.js').default;
 //SCHEMAS
 const Suite = mongoose.model('Suite', schema);
 

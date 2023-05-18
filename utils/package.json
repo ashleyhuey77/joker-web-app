@@ -1,0 +1,10 @@
+{
+  "name": "utils",
+  "packageManager": "yarn@3.5.0",
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0"
+  }
+}
