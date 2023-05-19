@@ -1,15 +1,30 @@
-
-
-#test-suites {
+#page {
     margin-left: 60px;
-    margin-top: 15px;
-    background: #212529;
-    color: #fff;
+    margin-top: 40px;
+    height: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+		'leftcol dragbar rightcol';
+    grid-template-rows: 650px;
+    grid-template-columns: 1fr 6px 1fr;
 }
 
-#test-steps {
-    margin-top: 15px;
-    margin-left: 60px;
-    background: #212529;
-    color: #fff;
+#leftcol {
+    background-color: #aaaaaa;
+    overflow: auto;
+    grid-area: leftcol;
+}
+
+#dragbar {
+    background-color: white;
+    grid-area: dragbar;
+    cursor: ew-resize;
+}
+
+
+#rightcol {
+    background-color: #aaaaaa;
+    overflow: auto;
+    grid-area: rightcol;
 }
