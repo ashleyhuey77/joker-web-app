@@ -3,6 +3,7 @@ from unittest import TestCase, mock
 from unittest.mock import patch
 from server.src.teststeps import init_app
 from server.src.config import config
+from unittest.mock import create_autospec
 from server.src.teststeps.test_steps_factory import (
     TestStepsFactory,
     TestStepsModel,
@@ -20,16 +21,12 @@ class TestFactory(TestCase):
         self.factory = TestStepsFactory()
 
     def test_get_all_persons_with_no_persons_in_db_returns_empty_list(self):
-        with app.app_context():
-            with mock.patch(
-                "server.src.teststeps.test_steps_factory.TestStepsModel.query",
-                autospec=True,
-            ) as query_mock:
-                query_mock.return_value.all.return_value = None
+        query_mock = create_autospec(TestStepsModel)
+        query_mock.return_value.all.return_value = None
 
-                test_steps = self.factory.get_all_test_steps()
+        test_steps = self.factory.get_all_test_steps()
 
-                self.assertFalse(test_steps)
+        self.assertFalse(test_steps)
 
     def test_get_all_persons_with_2_persons_in_db_returns_two_persons(self):
         with patch(
