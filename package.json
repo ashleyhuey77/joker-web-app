@@ -5,10 +5,25 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --runInBand"
+    "test": "react-scripts test --runInBand",
+    "prepare": "husky install",
+    "lint": "eslint --color --quiet",
+    "style": "prettier --write client/src/"
   },
   "dependencies": {
     "express": "^4.18.2",
     "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0"
   }
 }
