@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "joker-web-app"
+version = "0.1.0"
+description = ""
+authors = ["Ash Huey <ashley.huey@meraki.net>"]
+readme = "README.md"
+packages = [{include = "joker_web_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+pytest = "^5.2"
+pylama = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

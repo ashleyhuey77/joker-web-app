@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = ["Ash Huey <ashleyhuey77@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+loguru = "^0.7.0"
+flask = "^2.3.2"
+werkzeug = "^2.3.6"
+jinja2 = "^3.1.2"
+itsdangerous = "^2.1.2"
+click = "^8.1.4"
+markupsafe = "^2.1.3"
+blinker = "^1.6.2"
+flask-sqlalchemy = "^3.0.5"
+sqlalchemy-utils = "^0.41.1"
+injector = "^0.20.1"
+api = "^0.0.7"
+flask-injector = "^0.14.0"
+pre-commit = "^3.3.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+pytest = "^5.2"
+pylama = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

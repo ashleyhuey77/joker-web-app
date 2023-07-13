@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.7.0
+    hooks:
+      - id: black
+        files: '.py'
+        language: python
+        types: [ file, python ]
+  - repo: https://github.com/klen/pylama
+    rev: 8.4.1
+    hooks:
+      - id: pylama
+        name: pylama
+        description: This hook runs pylama.
+        entry: pylama
+        files: '.py'
+        language: python
+        types: [ file, python ]
