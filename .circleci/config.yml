@@ -14,9 +14,8 @@ jobs:
       - checkout
       - node/install:
           node-version: "14.21.3"
-      - node/install-packages
-      - run:
-          command: npm install -g yarn
+      - node/install-packages:
+          pkg-manager: yarn
       - run:
           command: yarn install
       - persist_to_workspace:
