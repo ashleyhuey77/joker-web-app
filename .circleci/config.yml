@@ -5,14 +5,6 @@ orbs:
   node: circleci/node@5.1.0
   python: circleci/python@2.1.1
 jobs:
-  test-node:
-    # Install node dependencies and run tests
-    executor: node/default
-    working_directory: ~/joker-web-app/client
-    steps:
-      - run:
-          name: Run react jest unit tests
-          command: yarn run test
   build-node:
     # Build node project
     working_directory: ~/joker-web-app/client
@@ -26,13 +18,13 @@ jobs:
       - persist_to_workspace:
           root: ~/project
           paths: .
+      - run:
+          name: Run react jest unit tests
+          command: yarn run test
 workflows:
   build-and-test:
     jobs:
       - build-node
-      - test-node:
-          requires:
-            - build-node
     # - deploy:
     #     requires:
     #       - build-node
