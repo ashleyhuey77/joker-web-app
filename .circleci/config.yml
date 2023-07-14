@@ -6,17 +6,20 @@ orbs:
   python: circleci/python@2.1.1
 jobs:
   build-node:
+    docker:
+      - image: "cimg/base:stable"
     # Build node project
     working_directory: ~/joker-web-app/client
-    executor: node/default
     steps:
       - checkout
+      - node/install:
+          node-version: "14.21.3"
       - node/install-packages:
           pkg-manager: yarn
       - run:
           command: yarn install
       - persist_to_workspace:
-          root: ~/project
+          root: ~/
           paths: .
       - run:
           name: Run react jest unit tests
