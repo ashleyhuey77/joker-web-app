@@ -6,8 +6,6 @@ orbs:
   python: circleci/python@2.1.1
 jobs:
   build-node:
-    docker:
-      - image: "cimg/base:stable"
     # Build node project
     working_directory: ~/joker-web-app/client
     steps:
