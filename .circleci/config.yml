@@ -2,12 +2,13 @@
 # Stacks detected: deps:node:.,deps:python:.,package_manager:poetry:.,package_manager:yarn:
 version: 2.1
 orbs:
-  node: circleci/node@5
-  python: circleci/python@2
+  node: circleci/node@16.20.0
+  python: circleci/python@3
 jobs:
   test-node:
     # Install node dependencies and run tests
     executor: node/default
+    working_directory: ~/client
     steps:
       - checkout
       - node/install-packages:
@@ -17,6 +18,7 @@ jobs:
           command: yarn test
   build-node:
     # Build node project
+    working_directory: ~/client
     executor: node/default
     steps:
       - checkout
@@ -27,13 +29,9 @@ jobs:
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
-      # Copy output to artifacts dir
-      - run:
-          name: Copy artifacts
-          command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
-      - store_artifacts:
-          path: ~/artifacts
-          destination: node-build
+      - persist_to_workspace:
+          root: ~/project
+          paths: .
 workflows:
   build-and-test:
     jobs:
