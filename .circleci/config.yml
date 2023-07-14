@@ -8,17 +8,14 @@ jobs:
   test-node:
     # Install node dependencies and run tests
     executor: node/default
-    working_directory: ~/client
+    working_directory: ~/joker-web-app/client
     steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: yarn
       - run:
           name: Run react jest unit tests
-          command: yarn test
+          command: yarn run test
   build-node:
     # Build node project
-    working_directory: ~/client
+    working_directory: ~/joker-web-app/client
     executor: node/default
     steps:
       - checkout
@@ -26,9 +23,6 @@ jobs:
           pkg-manager: yarn
       - run:
           command: yarn install
-      - run:
-          name: Create the ~/artifacts directory if it doesn't exist
-          command: mkdir -p ~/artifacts
       - persist_to_workspace:
           root: ~/project
           paths: .
