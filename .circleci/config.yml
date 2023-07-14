@@ -25,8 +25,6 @@ jobs:
       - run:
           command: yarn install
       - run:
-          command: yarn build
-      - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
       # Copy output to artifacts dir
