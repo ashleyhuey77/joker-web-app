@@ -34,15 +34,12 @@ beforeAll(() => {
 });
 
 function NavBar() {
-    return (
-        <BrowserRouter history={'/'}>
-            <Sidebar />
-            <Content />
-        </BrowserRouter>
-    );
-
-    delete window.location;
-    window.location = { reload: jest.fn() };
+  return (
+    <BrowserRouter history={'/'}>
+      <Sidebar />
+      <Content />
+    </BrowserRouter>
+  );
 }
 
 describe('Side Navigation Bar', () => {
