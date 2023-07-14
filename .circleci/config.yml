@@ -14,7 +14,7 @@ jobs:
       - checkout
       - node/install:
           node-version: "14.21.3"
-      - node/install-packages:
+      - node/install-packages
       - run:
           command: npm install -g yarn
       - run:
