@@ -8,7 +8,7 @@ const jestConfig = {
   snapshotSerializers: [
     "enzyme-to-json/serializer"
   ],
-  testMatch: ['**/*.test.js'],
+  testMatch: ['*.test.js'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx|mjs)$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform'
