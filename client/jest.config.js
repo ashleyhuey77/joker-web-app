@@ -14,7 +14,8 @@ const jestConfig = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx|mjs)$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform'
-  }
+  },
+  roots: ["<rootDir>/"]
 }
 
 export default jestConfig;

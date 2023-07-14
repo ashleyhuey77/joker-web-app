@@ -55,7 +55,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts start",
-    "test": "react-scripts test --runInBand --silent --env=jsdom"
+    "test": "react-scripts test --runInBand --silent"
   },
   "eslintConfig": {
     "extends": [
