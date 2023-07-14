@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-<<<<<<< HEAD
 yarn lint
 yarn style
-=======
-npm test
->>>>>>> 4ee5773e9 (add linting)
