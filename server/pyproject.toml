@@ -21,6 +21,7 @@ injector = "^0.20.1"
 api = "^0.0.7"
 flask-injector = "^0.14.0"
 pre-commit = "^3.3.3"
+python-decouple = "^3.8"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
