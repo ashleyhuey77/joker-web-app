@@ -20,7 +20,7 @@ jobs:
           paths: .
       - run:
           name: Run react jest unit tests
-          command: yarn run test a
+          command: yarn test a
 workflows:
   build-and-test:
     jobs:

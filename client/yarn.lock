@@ -3285,7 +3285,7 @@ babel-jest@^27.4.2, babel-jest@^27.5.1:
     graceful-fs "^4.2.9"
     slash "^3.0.0"
 
-babel-jest@^29.5.0:
+babel-jest@^29.6.1:
   version "29.6.1"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.6.1.tgz#a7141ad1ed5ec50238f3cd36127636823111233a"
   integrity sha512-qu+3bdPEQC6KZSPz+4Fyjbga5OODNcp49j6GKzG1EKbkfyJBxEYGVUmVGpwCSeGouG52R4EgYMLb6p9YeEEQ4A==
