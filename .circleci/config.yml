@@ -9,8 +9,6 @@ jobs:
     working_directory: ~/joker-web-app/client
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: yarn
       - run:
           command: yarn install
       - run:
