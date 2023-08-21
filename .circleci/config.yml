@@ -6,14 +6,11 @@ jobs:
     # Build node project
     docker:
       - image: cimg/node:16.20.2
-    working_directory: ~/joker-web-app/client
+    working_directory: ~/joker-web-app
     steps:
       - checkout
       - run:
-          command: yarn install
-      - run:
-          name: Run react jest unit tests
-          command: yarn test a
+          command: cd client && yarn install && yarn test a
 workflows:
   build-and-test:
     jobs:
