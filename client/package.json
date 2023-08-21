@@ -56,7 +56,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts start",
-    "test": "node ./node_modules/react-scripts/scripts/test.js --runInBand --silent --maxWorkers=2"
+    "test": "react-scripts test --runInBand --silent"
   },
   "eslintConfig": {
     "extends": [
