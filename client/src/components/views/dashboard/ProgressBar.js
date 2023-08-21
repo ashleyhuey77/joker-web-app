@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from 'react-bootstrap/esm/ProgressBar.js';
+import { ProgressBar } from 'react-bootstrap';
 
 export function TestProgress(props) {
     const passClassName = 'passing' + setBorder(props.pass);
