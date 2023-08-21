@@ -1,31 +1,18 @@
 # This config was automatically generated from your source code
 # Stacks detected: deps:node:.,deps:python:.,package_manager:poetry:.,package_manager:yarn:
 version: 2.1
-orbs:
-  node: circleci/node@5.1.0
 jobs:
   build-node:
     # Build node project
     docker:
-      - image: cimg/node:stable
+      - image: cimg/node:16.20.2
     working_directory: ~/joker-web-app/client
-    executor: node/default
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
       - node/install-packages:
           pkg-manager: yarn
       - run:
           command: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-            - ~/.npm
-            - ~/.cache
-          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Run react jest unit tests
           command: yarn test a
