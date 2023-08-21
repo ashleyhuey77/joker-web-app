@@ -1,6 +1,4 @@
 const jestConfig = {
-  rootDir: ["."],
-  roots: ["<rootDir>"],
   verbose: true,
   testEnvironment: 'jest-environment-jsdom',
   testEnvironmentOptions: {
