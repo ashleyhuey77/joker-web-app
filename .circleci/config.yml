@@ -6,11 +6,9 @@ jobs:
     # Build node project
     docker:
       - image: cimg/node:16.20.2
-    working_directory: ~/joker-web-app
+    working_directory: ~/joker-web-app/client
     steps:
       - checkout
-      - run:
-          command: cd client
       - run:
           command: yarn install
       - run:
